@@ -44,7 +44,7 @@ namespace VAA.UI
                         liManagecycles.Visible = false;
                         liDeleteMenu.Visible = false;
                         liMenuTranslation.Visible = false;
-                        liManageBoxTicket.Visible = false;
+                        //liManageBoxTicket.Visible = false;
                         liManagePrintRun.Visible = false;
                     }
                 }

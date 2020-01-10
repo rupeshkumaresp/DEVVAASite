@@ -35,7 +35,7 @@ namespace VAA.UI
                 {
                     Page.Title = "";
                     StatusHandling();
-                    LoadChiliDocument(true);
+                    LoadChiliDocument(false);
                 }
             }
             catch (Exception ex)
@@ -359,7 +359,7 @@ namespace VAA.UI
                         };
                         bool isUpdated = _menuManagement.UpdateStatus(newmenu, Convert.ToInt32(Session["USERID"]));
 
-                        LoadChiliDocument(true);
+                        LoadChiliDocument(false);
                         if (isUpdated)
                         {
                             var menudata = _menuManagement.GetMenuById(id);

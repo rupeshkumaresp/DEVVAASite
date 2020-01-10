@@ -85,14 +85,14 @@
                         <li id="liUpload" class="has-sub" runat="server"><a href="#">Upload</a>
                             <ul>
                                 <li id="liMenu" runat="server"><a href="UploadMenu.aspx">Menu</a></li>
-                                <li id="liSchedule" runat="server"><a href="UploadSchedules.aspx">Schedule</a></li>
+                                <li id="liSchedule" runat="server"><%--<a href="UploadSchedules.aspx">Schedule</a>--%></li>
                                 <li id="liMenuItems" runat="server"><a href="UploadMenuItems.aspx">Base Menu Items</a></li>
                             </ul>
                         </li>
                         <li id="liGenerate" class="has-sub" runat="server"><a href="#">Generate</a>
                             <ul>
                                 <li id="liAudit" runat="server"><a href="GenerateAudit.aspx">Audit</a></li>
-                                <li id="liPDF" runat="server"><a href="Generate.aspx">PDF</a></li>
+                                <%--<li id="liPDF" runat="server"><a href="Generate.aspx">PDF</a></li>--%>
 
                             </ul>
 
@@ -115,7 +115,7 @@
                             <ul>
                                 <li><a href="PrintStatusReport.aspx">Print Status</a></li>
                                 <li id="liManagePrintRun" runat="server"><a href="PrintRun.aspx">Print Run</a></li>
-                                <li id="liManageBoxTicket" runat="server"><a href="BoxTicket.aspx">Packing Ticket</a></li>
+                                <%--<li id="liManageBoxTicket" runat="server"><a href="BoxTicket.aspx">Packing Ticket</a></li>--%>
                                 <li id="li1" runat="server"><a href="Reports.aspx">System Reports</a></li>
                             </ul>
                         </li>                      

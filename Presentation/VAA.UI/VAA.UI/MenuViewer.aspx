@@ -162,8 +162,8 @@
                     <div align="center" style="clear: both;" class="row">
                         <hr />
                         <br />
-                        <asp:Button ID="btnFlash" Text="Show Flash Editor" runat="server" OnClick="btnFlashEditor_Click" />
-                        <asp:Button ID="btnHtml5" Text="Show HTML5 Editor" runat="server" OnClick="btnHTML5Editor_Click" />
+                        <asp:Button ID="btnFlash" Text="Show Flash Editor" Visible="False" runat="server" OnClick="btnFlashEditor_Click" />
+                        <asp:Button ID="btnHtml5" Text="Show HTML5 Editor" Visible="False" runat="server" OnClick="btnHTML5Editor_Click" />
                         <iframe id="iframeChiliProof" height="700px" width="90%" runat="server"></iframe>
                     </div>
 
