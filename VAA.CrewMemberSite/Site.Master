@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="VAA.CrewMemberSite.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - EMMA - Menu Viewer</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/MainMenuScript.js"></script>
+    <script src="Scripts/MenuActive.js"></script>
+    <script src="Scripts/bootbox.js"></script>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
+                <%--Framework Scripts--%>
+
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="page" class="wrapper">
+            <div class="row" id="header">
+                <div class="col-sm-4">
+                    <a href="Home.aspx" class="site-title">
+                        <img src="Images/EMMA_menuviewer_logo.png" />
+                    </a>
+                </div>
+                <div class="col-sm-8">
+                    <div id="login">
+                        <p>
+                            <span style="color: #88398e;">Welcome
+                            <label runat="server" id="lblUsername"></label>
+                                &nbsp;&nbsp;|&nbsp;</span>
+                            <asp:LinkButton ID="lnkbtnLogOut" runat="server" Text="Logout" OnClick="lnkbtnLogOut_Click"></asp:LinkButton>                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <%-- <div class="row">
+                <div id="cssmenu">
+                    <ul id="menu">
+                        <li><a runat="server" href="~/">Home</a></li>
+                    </ul>
+                </div>
+                </div>
+            --%>
+            <div id="main">
+                <div id="MainContentPanel" class="col-sm-12">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+           <div class="push"></div>
+        </div>
+        <div class="footer">
+            <p style="float: left; padding-top:5px;">
+                Support : +44 (0) 1793 438400
+                <br />
+                <span style="margin-left: 90px;">emma@espweb2print.co.uk</span>
+            </p>
+            <p style="font-size: 12px; padding-top: 25px; padding-right: 10px; float: right;">Copyright &copy; <%: DateTime.Now.Year %> - ESP Colour Ltd. All rights reserved.<br />ESP Colour Ltd, The Colour Hub, Millbuck Close, Swindon, United Kingdom SN2 8XU </p>
+        </div>
+
+    </form>
+</body>
+</html>

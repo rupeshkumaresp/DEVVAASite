@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="VAA.UI.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <title><%: Page.Title %> - EMMA</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/MainMenuScript.js"></script>
+    <script src="Scripts/MenuActive.js"></script>
+    <script src="Scripts/bootbox.js"></script>
+</head>
+
+<body>
+
+
+    <form runat="server">
+        <telerik:RadScriptManager runat="server" ID="RadScriptManager1">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </telerik:RadScriptManager>
+        <div id="page" class="container-fluid">
+
+            <div class="row" id="header">
+                <div class="col-sm-4">
+                    <a href="Home.aspx" class="site-title">
+                        <%--<img src="Images/Virgin-Atlantic-Logo_small.png" />--%>
+                        <img src="Images/EMMA_logo_small.png" />
+                    </a>
+                </div>
+                <div class="col-sm-8">
+                    <div id="login">
+                        <p>
+                            <span style="color: #aa2029;">Welcome
+                            <label runat="server" id="lblUsername"></label>
+                            </span>&nbsp;&nbsp;
+                        <a href="MyAccounts.aspx">My Account</a>&nbsp;&nbsp;|&nbsp;
+                            <asp:LinkButton ID="lnkbtnLogOut" runat="server" Text="Logout" OnClick="lnkbtnLogOut_Click"></asp:LinkButton>
+                            <%--<a href="Account/Login.aspx">Logout</a>--%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="cssmenu">
+                    <ul>
+                        <li class="active" runat="server"><a href="Home.aspx">Home</a></li>
+                        <li id="liOrderprocess" class="has-sub" runat="server"><a href="#">Order Process</a>
+                            <ul>
+                                <li><a href="PrintStatus.aspx" style="width: 185px;">Proof Status</a></li>
+                                <li><a href="LiveOrder.aspx" style="width: 185px;">Orders Ready</a></li>
+                                <li><a href="Orders.aspx" style="width: 185px;">Order History</a></li>
+                                <li><a href="http://virgin.approve4print.co.uk/Account/Login.aspx" target="_blank" style="width: 185px;">Club House Guides</a></li>
+                            </ul>
+                        </li>
+                        <li id="liUpload" class="has-sub" runat="server"><a href="#">Upload</a>
+                            <ul>
+                                <li id="liMenu" runat="server"><a href="UploadMenu.aspx">Menu</a></li>
+                                <li id="liSchedule" runat="server"><a href="UploadSchedules.aspx">Schedule</a></li>
+                                <li id="liMenuItems" runat="server"><a href="UploadMenuItems.aspx">Base Menu Items</a></li>
+                            </ul>
+                        </li>
+                        <li id="liGenerate" class="has-sub" runat="server"><a href="#">Generate</a>
+                            <ul>
+                                <li id="liAudit" runat="server"><a href="GenerateAudit.aspx">Audit</a></li>
+                                <li id="liPDF" runat="server"><a href="Generate.aspx">PDF</a></li>
+
+                            </ul>
+
+                        </li>
+                        <li id="liManage" runat="server" class="has-sub last"><a href="#">Manage</a>
+                            <ul>
+                                <li><a href="ManageApprovers.aspx">Approvers</a></li>
+                                <li><a href="BaseItems.aspx">Base Items</a></li>
+                                <li id="liManagecycles" runat="server"><a href="ManageCycles.aspx">Cycles</a></li>
+                                <%--<li><a href="ServicePlanValidator.aspx">Service Plan</a></li>--%>
+                                <li id="liDeleteMenu" runat="server"><a href="DeleteMenu.aspx">Delete Menu</a></li>
+                                <li><a href="RebuildMenu.aspx">Rebuild Menu</a></li>
+                                <li id="liMenuTranslation" runat="server"><a href="MenuTranslation.aspx">Translate Menu</a></li>
+                                <li><a href="Users.aspx">Users</a></li>
+                                <li><a href="MenuCodeUpdate.aspx">MenuCode Refresh</a></li>
+                               <%-- <li><a href="AllergenSpecialMealUpload.aspx">Allergen & Special meal</a></li> --%>
+                            </ul>
+                        </li>
+                        <li id="liReports" runat="server" class="has-sub last"><a href="#">Reports</a>
+                            <ul>
+                                <li><a href="PrintStatusReport.aspx">Print Status</a></li>
+                                <li id="liManagePrintRun" runat="server"><a href="PrintRun.aspx">Print Run</a></li>
+                                <li id="liManageBoxTicket" runat="server"><a href="BoxTicket.aspx">Packing Ticket</a></li>
+                                <li id="li1" runat="server"><a href="Reports.aspx">System Reports</a></li>
+                            </ul>
+                        </li>                      
+                        <li id="liScheduler" runat="server"><a href="schedules.aspx">Schedules</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="main">
+                <div id="MainContentPanel" class="col-sm-12">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div id="footer" class="row">
+                <hr />
+				<div style="float:right"> <a href="http://esppolicy.approve4print.co.uk/" target="_blank">Privacy Policy</a></div>
+                <p>Copyright &copy; <%: DateTime.Now.Year %> - ESP Colour Ltd. All rights reserved.<br />ESP Colour Ltd, The Colour Hub, Millbuck Close, Swindon, United Kingdom SN2 8XU </p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

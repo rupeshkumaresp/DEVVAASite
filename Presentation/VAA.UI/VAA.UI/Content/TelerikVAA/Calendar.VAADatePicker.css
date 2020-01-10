@@ -1,0 +1,412 @@
+.RadCalendar_VAADatePicker {
+    background: white;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 22px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+    .RadCalendar_VAADatePicker .rcTitlebar {
+        border-color: #d6d6d6;
+        background-color: #e6e6e6;
+        color: #757575;
+        padding: 0 2px;
+    }
+
+        .RadCalendar_VAADatePicker .rcTitlebar table {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 22px;
+            font-family: Arial,Helvetica,sans-serif;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar td {
+            padding: 0 3px 1px;
+            height: 31px;
+            font-size: 9px;
+            text-transform: uppercase;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcPrev, .RadCalendar_VAADatePicker .rcTitlebar .rcNext, .RadCalendar_VAADatePicker .rcTitlebar .rcFastPrev, .RadCalendar_VAADatePicker .rcTitlebar .rcFastNext {
+            margin: 0 2px;
+            width: 21px;
+            height: 21px;
+            margin: 1px 0 0;
+            background-image: url('Common/radActionsSprite.png');
+            color: #757575;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcFastPrev {
+            background-position: -14.5px -914.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcPrev {
+            background-position: -14.5px -114.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcNext {
+            background-position: -14.5px -164.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcFastNext {
+            background-position: -14.5px -964.5px;
+        }
+
+            .RadCalendar_VAADatePicker .rcTitlebar .rcPrev:hover, .RadCalendar_VAADatePicker .rcTitlebar .rcNext:hover, .RadCalendar_VAADatePicker .rcTitlebar .rcFastPrev:hover, .RadCalendar_VAADatePicker .rcTitlebar .rcFastNext:hover {
+                border-color: #d6d6d6;
+            }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcFastPrev:hover {
+            background-position: -64.5px -914.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcPrev:hover {
+            background-position: -64.5px -114.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcNext:hover {
+            background-position: -64.5px -164.5px;
+        }
+
+        .RadCalendar_VAADatePicker .rcTitlebar .rcFastNext:hover {
+            background-position: -64.5px -964.5px;
+        }
+
+    .RadCalendar_VAADatePicker .rcMain {
+        border-color: #d6d6d6;
+    }
+
+    .RadCalendar_VAADatePicker .rcMainTable {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 22px;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+
+    .RadCalendar_VAADatePicker .rcCalendars > .rcMainTable {
+        border-collapse: collapse;
+    }
+
+    .RadCalendar_VAADatePicker .rcCalendars {
+        border: 0;
+    }
+
+    .RadCalendar_VAADatePicker .rcHeader, .RadCalendar_VAADatePicker .rcFooter {
+        border-color: #d6d6d6;
+    }
+
+    .RadCalendar_VAADatePicker .rcWeek th {
+        border-bottom: 1px solid #d6d6d6;
+        color: #333333;
+        text-align: center;
+        height: 21px;
+        padding: 0 5px;
+        font-size: 13px;
+        background: #d6d6d6;
+    }
+
+    .RadCalendar_VAADatePicker .rcWeek .rcViewSel, .RadCalendar_VAADatePicker .rcRow th {
+        color: white;
+        font-size: 13px;
+    }
+
+    .RadCalendar_VAADatePicker .rcRow th {
+        padding: 0 8px 0 7px;
+        color: #333333;
+        background-color: #f2f2f2;
+    }
+
+    .RadCalendar_VAADatePicker .rcRow td {
+        border-color: white;
+        border-color: transparent;
+    }
+
+    .RadCalendar_VAADatePicker .rcMain .rcRow a, .RadCalendar_VAADatePicker .rcMain .rcRow span {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        width: #d6d6d6;
+        height: 21px;
+        line-height: 21px;
+        border: 1px solid white;
+        border-color: transparent;
+        color: #545454;
+        padding: 0;
+        text-align: center;
+    }
+
+    .RadCalendar_VAADatePicker .rcMain .rcWeekend a {
+        color: #545454;
+    }
+
+    .RadCalendar_VAADatePicker .rcRow .rcToday a {
+        border-color: #e60909;
+        box-shadow: 0 0 0 1px #e60909 inset;
+    }
+
+    .RadCalendar_VAADatePicker .rcMain .rcOtherMonth a {
+        color: #b0b0b0;
+    }
+
+    .RadCalendar_VAADatePicker .rcMain .rcOutOfRange span {
+        color: #787878;
+    }
+
+    .RadCalendar_VAADatePicker .rcMain .rcRow .rcSelected a {
+        border-color: #cc0202;
+        background: #e60909;
+        box-shadow: inset 0 0 4px #cc0202;
+        color: white;
+    }
+
+    .RadCalendar_VAADatePicker .rcRow .rcHover a {
+        border-color: #eb0000;
+        background-color: #b80000;
+        background-image: -webkit-linear-gradient(top,#eb0000 0,#b80000 100%);
+        background-image: -moz-linear-gradient(top,#eb0000 0,#b80000 100%);
+        background-image: -ms-linear-gradient(top,#eb0000 0,#b80000 100%);
+        background-image: -o-linear-gradient(top,#eb0000 0,#b80000 100%);
+        background-image: linear-gradient(top,#eb0000 0,#b80000 100%);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+        color: white;
+    }
+
+.RadCalendarMultiView_VAADatePicker .rcTitlebar {
+    border-bottom: 0 none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white',endColorstr='#c8d9fa',GradientType=0);
+    background-image: -webkit-linear-gradient(top,white 0,#f2f2f2 30%,#c8d9fa 100%);
+    background-image: -moz-linear-gradient(top,white 0,#f2f2f2 30%,#c8d9fa 100%);
+    background-image: -ms-linear-gradient(top,white 0,#f2f2f2 30%,#c8d9fa 100%);
+    background-image: -o-linear-gradient(top,white 0,#f2f2f2 30%,#c8d9fa 100%);
+    background-image: linear-gradient(top,white 0,#f2f2f2 30%,#c8d9fa 100%);
+    box-shadow: 0 1px 3px #d6d6d6;
+    padding: 0 7px;
+}
+
+    .RadCalendarMultiView_VAADatePicker .rcTitlebar td {
+        height: 37px;
+    }
+
+.RadCalendarMultiView_VAADatePicker .rcMain {
+    border-color: #d6d6d6;
+}
+
+.RadCalendarMultiView_VAADatePicker .rcCalendar {
+    border-color: #d6d6d6;
+}
+
+.RadCalendarMultiView_VAADatePicker .rcMainTable .rcTitle {
+    border-color: #e6e6e6;
+    background: #e6e6e6;
+    color: #878787;
+    padding: 0 0 2px;
+    line-height: 30px;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.RadCalendarMonthView_VAADatePicker {
+    border-color: #d6d6d6;
+    background: white;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 22px;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #757575;
+    width: 203px;
+}
+
+    .RadCalendarMonthView_VAADatePicker td {
+        padding: 3px 2px;
+        width: 50px;
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_Feb, .RadCalendarMonthView_VAADatePicker #rcMView_Apr, .RadCalendarMonthView_VAADatePicker #rcMView_Jun, .RadCalendarMonthView_VAADatePicker #rcMView_Aug, .RadCalendarMonthView_VAADatePicker #rcMView_Oct, .RadCalendarMonthView_VAADatePicker #rcMView_Dec {
+        border-right: 1px solid #d6d6d6;
+    }
+
+    .RadCalendarMonthView_VAADatePicker a {
+        color: #757575;
+        padding: 0;
+    }
+
+        .RadCalendarMonthView_VAADatePicker a:hover {
+            background-color: #eb0000;
+            background-image: -webkit-linear-gradient(top,#eb0000 0,#b80000 100%);
+            background-image: -moz-linear-gradient(top,#eb0000 0,#b80000 100%);
+            background-image: -ms-linear-gradient(top,#eb0000 0,#b80000 100%);
+            background-image: -o-linear-gradient(top,#eb0000 0,#b80000 100%);
+            background-image: linear-gradient(top,#eb0000 0,#b80000 100%);
+            padding: 0;
+        }
+
+    .RadCalendarMonthView_VAADatePicker .rcSelected a {
+        border-color: #cc0202;
+        background: #e60909;
+        box-shadow: inset 0 0 4px #cc0202;
+        color: white;
+        border-radius: 5px;
+        padding: 0;
+        border: 0;
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_PrevY a, .RadCalendarMonthView_VAADatePicker #rcMView_NextY a {
+        width: 32px;
+        height: 32px;
+        background: url('Common/radActionsSprite.png');
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_PrevY a {
+        background-position: -12px -914.5px;
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_NextY a {
+        background-position: -12px -964.5px;
+    }
+
+    .RadCalendarMonthView_VAADatePicker .rcButtons {
+        padding: 7px 0 1px;
+        width: auto;
+    }
+
+        .RadCalendarMonthView_VAADatePicker .rcButtons input {
+            background-image: url('Common/radGradientDarkV20.png');
+            _background-image: none;
+            border-color: #c9c9c9;
+            color: #757575;
+            background-color: #e3e3e3;
+            background-image: linear-gradient(#ffffff 0,#e3e3e3 100%);
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            color: #757575;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 22px;
+            font-family: Arial,Helvetica,sans-serif;
+            float: left;
+            height: 33px;
+            margin: 0 5px 5px;
+        }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_Today {
+        width: 50px;
+        margin: 0 25px 0 5px;
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_OK {
+        width: 41px;
+    }
+
+    .RadCalendarMonthView_VAADatePicker #rcMView_Cancel {
+        width: 60px;
+    }
+
+table.RadCalendarTimeView_VAADatePicker {
+    border-color: #d6d6d6;
+    background: white;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 22px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.RadCalendarTimeView_VAADatePicker th {
+    border-bottom: 1px solid #d6d6d6;
+    background: white;
+    color: #757575;
+    line-height: 22px;
+}
+
+table.RadCalendarTimeView_VAADatePicker td {
+    border-color: #d6d6d6;
+    width: 80px;
+    padding: 0;
+}
+
+.RadCalendarTimeView_VAADatePicker a {
+    color: #757575;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.RadCalendarTimeView_VAADatePicker td.rcSelected a {
+    border-color: #cc0202;
+    background: #e60909;
+    box-shadow: inset 0 0 4px #cc0202;
+    color: white;
+    padding: 0;
+    border: 0;
+}
+
+.RadCalendarTimeView_VAADatePicker td.rcHover a {
+    border-color: #eb0000;
+    background-color: #b80000;
+    background-image: -webkit-linear-gradient(top,#eb0000 0,#b50000 100%);
+    background-image: -moz-linear-gradient(top,#eb0000 0,#b50000 100%);
+    background-image: -ms-linear-gradient(top,#eb0000 0,#b50000 100%);
+    background-image: -o-linear-gradient(top,#eb0000 0,#b50000 100%);
+    background-image: linear-gradient(top,#eb0000 0,#b50000 100%);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    color: white;
+    padding: 0;
+    border: 0;
+}
+
+.RadCalendarTimeView_VAADatePicker .rcFooter {
+    border-color: #d6d6d6;
+}
+
+.RadPicker_VAADatePicker .rcCalPopup, .RadPicker_VAADatePicker .rcTimePopup {
+    background-image: url('Common/radActionsSprite.png');
+    width: 26px;
+    height: 21px;
+}
+
+.RadPicker_VAADatePicker .rcCalPopup {
+    background-position: -13px -4215.5px;
+}
+
+    .RadPicker_VAADatePicker .rcCalPopup:hover {
+        background-position: -63px -4215.5px;
+    }
+
+.RadPicker_VAADatePicker .rcTimePopup {
+    background-position: -13px -4265.5px;
+}
+
+    .RadPicker_VAADatePicker .rcTimePopup:hover {
+        background-position: -63px -4265.5px;
+    }
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar .rcFastPrev {
+    background-position: -64.5px -964.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar a.rcFastPrev:hover {
+    background-position: -64.5px -964.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar .rcPrev {
+    background-position: -14.5px -164.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar a.rcPrev:hover {
+    background-position: -64.5px -164.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar .rcNext {
+    background-position: -14.5px -114.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar a.rcNext:hover {
+    background-position: -64.5px -114.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar .rcFastNext {
+    background-position: -14.5px -914.5px;
+}
+
+.RadCalendarRTL_VAADatePicker .rcTitlebar a.rcFastNext:hover {
+    background-position: -64.5px -914.5px;
+}
